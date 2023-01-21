@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import AgentCard from "./AgentCard";
-import NoResults from "./NoResults";
-import ShimmerUI from "./ShimmerUI";
+import NoResults from "../common/NoResults";
+import ShimmerUI from "../common/ShimmerUI";
 
 const searchHandler = (googleText, agentList) => {
   return agentList.filter((agent) =>
@@ -9,7 +9,7 @@ const searchHandler = (googleText, agentList) => {
   );
 };
 
-const Body = () => {
+const AgentsBody = () => {
   const [agentList, setAgentlist] = useState([]);
   const [filteredAgent, setFilteredAgent] = useState([]);
   const [googleText, setGoogleText] = useState("");
@@ -27,8 +27,8 @@ const Body = () => {
     // .catch(error => console.log('error', error));
 
     const json = await data.json();
-
-    setAgentlist(json?.data);
+  
+   setAgentlist(json?.data);
     setFilteredAgent(json?.data);
   }
   //early return
@@ -38,6 +38,7 @@ const Body = () => {
     <ShimmerUI />
   ) : (
     <>
+     
       <div className="searchbar">
         <input
           type="text"
@@ -84,4 +85,4 @@ const Body = () => {
   );
 };
 
-export default Body;
+export default AgentsBody;

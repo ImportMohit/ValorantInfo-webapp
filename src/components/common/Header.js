@@ -1,4 +1,5 @@
 import Logoicon from "../../images/valoIcon.png";
+import { Link } from "react-router-dom";
 /********Header**********/
 //state
 
@@ -13,10 +14,11 @@ const valorantlogo = (
 
 const navItems = (
   <ul className="nav-items">
-    <li>Home</li>
-    <li>Weapons</li>
-    <li>Maps</li>
-    <li>About</li>
+    <li><Link to="/" className="text-link">Home</Link></li>
+    <li><Link to="/agents" className="text-link">Agents</Link></li>
+    <li><Link to="/weapons" className="text-link">Weapons</Link></li>
+    <li><Link to="/maps" className="text-link">Maps</Link></li>
+    <li><Link to="/mystats" className="text-link">My-Stats</Link></li>
   </ul>
 );
 //final Header
