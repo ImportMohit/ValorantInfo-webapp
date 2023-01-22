@@ -4,7 +4,7 @@ import Header from "./components/common/Header";
 import HomeBody from "./components/Home/Body";
 import AgentsBody from "./components/agents/Body";
 import WeaponBody from "./components/weapons/Body"
-import MapsBody from "./components/maps/Body.JS";
+import MapsBody from "./components/maps/Body";
 import MyStatsBody from "./components/mystats/Body";
 import Footer from "./components/common/Footer";
 
