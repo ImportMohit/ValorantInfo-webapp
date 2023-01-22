@@ -28,13 +28,13 @@ body{
     margin: 10% 0 10% 20%;
     height: 80%;
 }
-.text-link {
+.text-link ,.linkbox {
     color: inherit;
     text-decoration: inherit;
 }
 
 /*******************/
-.agentcard{
+.displaycard{
     margin: 30px;
     margin-top: 50px;
   
@@ -44,12 +44,12 @@ body{
     padding: 8px;
   
 }
-.agentcard .agentImage{
+.displaycard .agentImage{
     width: 100%;
     border-radius: 4px 4px 4px 4px;
     
 }
-.agentlist{
+.cardlist{
     display: flex;
     flex-wrap:wrap;
     justify-content:center;
@@ -123,7 +123,7 @@ margin:0;
     
     .bg {
     animation:slide 3s ease-in-out infinite alternate;
-    background-image: linear-gradient(-60deg, #19255B 50%, #38222F 50%);
+    background-image: linear-gradient(-60deg, #19255B 50%, orange 50%);
     bottom:0;
     left:-50%;
     opacity:.5;
@@ -245,4 +245,38 @@ footer-bottom p{
     text-transform: uppercase;
     opacity: .4;
     font-weight: 200;
+}
+/****agentInfopage*****/
+.agentInfo{
+    margin: 3%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.agentLargeImage{
+   
+    height: 40vh;
+    width: 30vw;
+}
+.agentName,.agentDescription{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+    text-shadow: 5px 5px #000000;
+
+}
+.abilities{
+    display: flex;
+   
+    flex-direction: row;
+}
+.abilityvalue{
+    height:50%;
+    width: 50%;
+    margin:10px;
+}
+.abilityvalueimg{
+    height: 25%;
+    width:25%;
 }

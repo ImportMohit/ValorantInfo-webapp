@@ -1,6 +1,7 @@
 import ReactAudioPlayer from "react-audio-player";
 import audioIcon from "../../images/audio.png";
-import { useState } from "react";
+import { useState} from "react";
+import { Link } from "react-router-dom";
 //agent card
 
 const AgentCard = (props) => {
@@ -13,8 +14,8 @@ const AgentCard = (props) => {
     backgroundPosition: "center",
   };
   return (
-    <div className="agentcard" style={background}>
-      <img src={props.bustPortrait} className="agentImage" alt="icon" />
+    <div className="displaycard" style={background}>
+      <Link to={"/agents/" + props.uuid} className="linkbox"><img src={props.bustPortrait} className="agentImage" alt="icon" /></Link> 
       <h2>{props.displayName}</h2>
       <h3>{props.abilities.map(printAbility)}</h3>
       <img
